@@ -44,6 +44,10 @@ module.exports.addUser = function(newUser, callback){
 }
 
 module.exports.comparePassword = function(candidatePassword, hash, callback){
+    if(!candidatePassword){ // if password is empty
+        callback(null, false);
+        return false;
+    }
     bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
         if(err) throw err;
         callback(null, isMatch);

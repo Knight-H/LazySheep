@@ -27,7 +27,7 @@ const app = express();
 const users = require('./routes/users'); 
 
 //PORT Number
-const port = 3000;
+const port = process.env.PORT || 8080;
 
 //CORS Middleware 
 app.use(cors()); //allow access of API from any domain, can set up specific domains to access
@@ -49,6 +49,11 @@ app.use('/users', users);
 //Index Route
 app.get('/', (req, res)=>{
     res.send('Invalid Endpoint');
+});
+
+//any other route
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 //Start Server

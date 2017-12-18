@@ -10,6 +10,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <!-- use mr-auto to the left-->
+
+      <!-- Home -->
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/']">Home</a></li>
 
 
@@ -32,12 +34,26 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item" id="orderButton"><a class="btn btn-primary" href="#" role="button">Order</a></li>
       <!--li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></li-->
-      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/login']">Login</a></li>
-      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/register']">Register</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+      <!-- DashBoard -->
+      <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a></li>
+      <!-- Profile -->
+      <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/profile']">Profile</a></li>
+      <!-- Login -->
+      <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/login']">Login</a></li>
+      <!-- Register -->
+      <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/register']">Register</a></li>
+      <!-- About -->
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/']">About</a></li>
+      <!-- Services -->
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/']">Services</a></li>
+      <!-- Gallery -->
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/']">Gallery</a></li>
+      <!-- Contact -->
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/']">Contact</a></li>
+
+      <!-- Logout -->
+      <li *ngIf="authService.loggedIn()" class="nav-item" ><a class="nav-link" (click)="onLogoutClick()" href="#">Logout</a></li>
     </ul>
     <!--SEARCH
                     <form class="form-inline my-2 my-lg-0">
