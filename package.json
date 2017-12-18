@@ -1,0 +1,34 @@
+{
+  "name": "lazysheep",
+  "version": "1.0.0",
+  "description": "MEAN stack authentication app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Knight-H/LazySheep.git"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "typescript": "^2.6.2"
+  },
+  "author": "Thanapapas Horsuwan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Knight-H/LazySheep/issues"
+  },
+  "homepage": "https://github.com/Knight-H/LazySheep#readme",
+  "devDependencies": {
+    "@angular/cli": "^1.6.1"
+  }
+}
