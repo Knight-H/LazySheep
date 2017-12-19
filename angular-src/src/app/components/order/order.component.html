@@ -1,0 +1,31 @@
+
+<h2 class="page-header">Order</h2>
+<form (submit)="onOrderSubmit()">
+  <div class="form-group">
+    <label>Project Name</label>
+    <input type="text" [(ngModel)]="projectName" name="projectName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Project Description (if any)</label>
+    <input type="text" [(ngModel)]="projectDesc" name="projectDesc" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>File</label>
+    <input type="file" [(ngModel)]="file" name="file" class="btn btn-secondary" >
+    <input type="button" class="btn btn-primary" (click)="uploadFile()" value="Upload">
+  </div>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" [(ngModel)]="name" name="name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" [(ngModel)]="email" name="email" class="form-control" >
+  </div>
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="text" [(ngModel)]="phoneNo" name="phoneNo" class="form-control" >
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Order">
+</form>
