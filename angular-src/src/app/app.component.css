@@ -1,0 +1,22 @@
+
+footer{
+    margin-top: 100px;
+    width: 100%;
+    background-color: #8E8C84;
+    padding: 3%;
+    color:white;
+}
+
+h3, h4{
+    font-size: medium;
+}
+
+footer .fa{
+    padding: 15px;
+    font-size: 30px;
+    color:white;
+}
+footer .fa:hover{
+    color: #D5D5D5;
+    text-decoration: none;
+}

@@ -1,0 +1,43 @@
+
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+
+.carousel-inner .btn{
+    font-size: 18px;
+    color:white;
+    border: 1px solid white;
+    padding: 12px 22px;
+    background: purple;
+    
+}
+.carousel-inner .btn:hover{
+    background:mediumpurple;
+}
+
+
+
+.values{
+    padding: 80px 0 80px;
+}
+.values h2,
+.values h4{
+    margin: 20px 0 20px;
+}
+.values p{
+    font-size: 14px;
+    padding-bottom: 40px;
+}
+.values i{
+    height: 80px;
+    width: 80px;
+    font-size: 30px;
+    padding: 25px 20px;
+    border-radius: 50%;
+    background-color: #6699cc;
+    color:white;
+}
+
+

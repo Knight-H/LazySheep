@@ -54,6 +54,7 @@ export class OrderComponent implements OnInit {
     }
     // maybe validate phone number later
     
+    
     //remove this for actual
     this.flashMessage.show('You have sent the order', {cssClass: 'alert-success', timeout: 3000});
     if(this.authService.loggedIn()){
